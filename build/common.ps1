@@ -197,6 +197,10 @@ Function Install-DotnetCLI {
     $msbuildExe = 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\bin\msbuild.exe'
     $CliTargetBranch = & $msbuildExe $NuGetClientRoot\build\config.props /v:m /nologo /t:GetCliTargetBranch
 
+    # tests depend on `dotnet list package`, which was added in CLI 2.2.1xx. So, test with that version, even though the 4.9 branch targets CLI 2.1.5xx.
+    # dev, master and future release branches shouldn't need to override the CliTargetBranch
+    $CliTargetBranch = "release/2.2.1xx"
+
     $cli = @{
             Root = $CLIRoot
             DotNetExe = Join-Path $CLIRoot 'dotnet.exe'
