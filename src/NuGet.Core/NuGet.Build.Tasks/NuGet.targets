@@ -78,6 +78,7 @@ Copyright (c) .NET Foundation. All rights reserved.
       _RestoreSolutionFileUsed=true;
       SolutionDir=$(SolutionDir);
       SolutionName=$(SolutionName);
+      SolutionFileName=$(SolutionFileName);
     </_GenerateRestoreGraphProjectEntryInputProperties>
   </PropertyGroup>
 
