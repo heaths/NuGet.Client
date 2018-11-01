@@ -71,6 +71,15 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The argument cannot be null or empty..
+        /// </summary>
+        internal static string ArgumentCannotBeNullOrEmpty {
+            get {
+                return ResourceManager.GetString("ArgumentCannotBeNullOrEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Building project &apos;{0}&apos; for target framework &apos;{1}&apos;..
         /// </summary>
         internal static string BuildingProjectTargetingFramework {
@@ -89,6 +98,15 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Author trust was expected but package is not author signed..
+        /// </summary>
+        internal static string Error_AuthorTrustExpectedAuthorSignature {
+            get {
+                return ResourceManager.GetString("Error_AuthorTrustExpectedAuthorSignature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to build using &apos;{0} {1}&apos;..
         /// </summary>
         internal static string Error_BuildFailed {
@@ -103,6 +121,51 @@ namespace NuGet.Commands {
         internal static string Error_CannotFindMsbuild {
             get {
                 return ResourceManager.GetString("Error_CannotFindMsbuild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trusted owners are not supported in trusted author items..
+        /// </summary>
+        internal static string Error_CannotTrustOwnersForAuthor {
+            get {
+                return ResourceManager.GetString("Error_CannotTrustOwnersForAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not add trusted signer: {0}.
+        /// </summary>
+        internal static string Error_CouldNotAdd {
+            get {
+                return ResourceManager.GetString("Error_CouldNotAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not list trusted signers: {0}.
+        /// </summary>
+        internal static string Error_CouldNotList {
+            get {
+                return ResourceManager.GetString("Error_CouldNotList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not remove trusted signer: {0}.
+        /// </summary>
+        internal static string Error_CouldNotRemove {
+            get {
+                return ResourceManager.GetString("Error_CouldNotRemove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not sync trusted repository: {0}.
+        /// </summary>
+        internal static string Error_CouldNotSync {
+            get {
+                return ResourceManager.GetString("Error_CouldNotSync", resourceCulture);
             }
         }
         
@@ -139,6 +202,24 @@ namespace NuGet.Commands {
         internal static string Error_InvalidATF {
             get {
                 return ResourceManager.GetString("Error_InvalidATF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Invalid certificate information from service index &apos;{0}&apos;.
+        /// </summary>
+        internal static string Error_InvalidCertificateInformationFromServer {
+            get {
+                return ResourceManager.GetString("Error_InvalidCertificateInformationFromServer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid combination of arguments..
+        /// </summary>
+        internal static string Error_InvalidCombinationOfArguments {
+            get {
+                return ResourceManager.GetString("Error_InvalidCombinationOfArguments", resourceCulture);
             }
         }
         
@@ -224,6 +305,15 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The {0} does not have a signing certificate..
+        /// </summary>
+        internal static string Error_NoCertificate {
+            get {
+                return ResourceManager.GetString("Error_NoCertificate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The package signature did not match any of the allowed certificate fingerprints..
         /// </summary>
         internal static string Error_NoMatchingCertificate {
@@ -251,11 +341,38 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No signature was specified to be trusted for package &apos;{0}&apos;. Please specify either Author or Repository..
+        /// </summary>
+        internal static string Error_NoSignatureTrustedForPackage {
+            get {
+                return ResourceManager.GetString("Error_NoSignatureTrustedForPackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to get package sources information..
+        /// </summary>
+        internal static string Error_NoSourcesInformation {
+            get {
+                return ResourceManager.GetString("Error_NoSourcesInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to find a stable package {0} with version {1}.
         /// </summary>
         internal static string Error_NoStablePackageVersionsExist {
             get {
                 return ResourceManager.GetString("Error_NoStablePackageVersionsExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; is not a supported hash algorithm..
+        /// </summary>
+        internal static string Error_NotSupportedHashAlgorithm {
+            get {
+                return ResourceManager.GetString("Error_NotSupportedHashAlgorithm", resourceCulture);
             }
         }
         
@@ -274,6 +391,15 @@ namespace NuGet.Commands {
         internal static string Error_PackageCommandNoFilesForSymbolsPackage {
             get {
                 return ResourceManager.GetString("Error_PackageCommandNoFilesForSymbolsPackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The package is not signed..
+        /// </summary>
+        internal static string Error_PackageNotSigned {
+            get {
+                return ResourceManager.GetString("Error_PackageNotSigned", resourceCulture);
             }
         }
         
@@ -323,6 +449,24 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Property &apos;{0}&apos; should not be null or empty..
+        /// </summary>
+        internal static string Error_PropertyCannotBeNullOrEmpty {
+            get {
+                return ResourceManager.GetString("Error_PropertyCannotBeNullOrEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repository trust was expected but package is not repository signed..
+        /// </summary>
+        internal static string Error_RepoTrustExpectedRepoSignature {
+            get {
+                return ResourceManager.GetString("Error_RepoTrustExpectedRepoSignature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The packages lock file is inconsistent with the project dependencies so restore can&apos;t be run in locked mode. Please disable RestoreLockedMode MSBuild property or pass explicit --force-evaluate flag to run restore to update the lock file..
         /// </summary>
         internal static string Error_RestoreInLockedMode {
@@ -332,11 +476,56 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The repository service index &apos;{0}&apos; is not a valid HTTPS url..
+        /// </summary>
+        internal static string Error_ServiceIndexShouldBeHttps {
+            get {
+                return ResourceManager.GetString("Error_ServiceIndexShouldBeHttps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid tools package {0} {1}. Tools packages cannot contain more than one PackageType..
         /// </summary>
         internal static string Error_ToolsPackageWithExtraPackageTypes {
             get {
                 return ResourceManager.GetString("Error_ToolsPackageWithExtraPackageTypes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trusted author cannot have owners..
+        /// </summary>
+        internal static string Error_TrustedAuthorNoOwners {
+            get {
+                return ResourceManager.GetString("Error_TrustedAuthorNoOwners", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trusted repository with service index &apos;{0}&apos; already exists..
+        /// </summary>
+        internal static string Error_TrustedRepoAlreadyExists {
+            get {
+                return ResourceManager.GetString("Error_TrustedRepoAlreadyExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trusted repository with name &apos;{0}&apos; does not exist..
+        /// </summary>
+        internal static string Error_TrustedRepositoryDoesNotExist {
+            get {
+                return ResourceManager.GetString("Error_TrustedRepositoryDoesNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trusted signer with name &apos;{0}&apos; already exists..
+        /// </summary>
+        internal static string Error_TrustedSignerAlreadyExists {
+            get {
+                return ResourceManager.GetString("Error_TrustedSignerAlreadyExists", resourceCulture);
             }
         }
         
@@ -386,11 +575,29 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Source with name &apos;{0}&apos; does not exist or cannot be retrived..
+        /// </summary>
+        internal static string Error_UnavailableSource {
+            get {
+                return ResourceManager.GetString("Error_UnavailableSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Package &apos;{0}&apos; specifies an invalid build action &apos;{1}&apos; for file &apos;{2}&apos;..
         /// </summary>
         internal static string Error_UnknownBuildAction {
             get {
                 return ResourceManager.GetString("Error_UnknownBuildAction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The trust target &apos;{0}&apos; is unsupported..
+        /// </summary>
+        internal static string Error_UnsupportedTrustTarget {
+            get {
+                return ResourceManager.GetString("Error_UnsupportedTrustTarget", resourceCulture);
             }
         }
         
@@ -1251,6 +1458,24 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There are no trusted signers..
+        /// </summary>
+        internal static string NoTrustedSigners {
+            get {
+                return ResourceManager.GetString("NoTrustedSigners", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No trusted signers with name: &apos;{0}&apos; where found..
+        /// </summary>
+        internal static string NoTrustedSignersMatching {
+            get {
+                return ResourceManager.GetString("NoTrustedSignersMatching", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://docs.nuget.org/.
         /// </summary>
         internal static string NuGetDocs {
@@ -1310,6 +1535,15 @@ namespace NuGet.Commands {
         internal static string PropertyNotAllowedForProjectType {
             get {
                 return ResourceManager.GetString("PropertyNotAllowedForProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registered trusted signers:.
+        /// </summary>
+        internal static string RegsiteredTrustedSigners {
+            get {
+                return ResourceManager.GetString("RegsiteredTrustedSigners", resourceCulture);
             }
         }
         
@@ -1503,6 +1737,69 @@ namespace NuGet.Commands {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Successfully removed trusted signers with name: &apos;{0}&apos;.
+        /// </summary>
+        internal static string SuccessfullyRemovedTrustedSigner {
+            get {
+                return ResourceManager.GetString("SuccessfullyRemovedTrustedSigner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Certificate fingerprint(s):.
+        /// </summary>
+        internal static string TrustedSignerLogCertificates {
+            get {
+                return ResourceManager.GetString("TrustedSignerLogCertificates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [U] {0} - {1}.
+        /// </summary>
+        internal static string TrustedSignerLogCertificateSummaryAllowUntrustedRoot {
+            get {
+                return ResourceManager.GetString("TrustedSignerLogCertificateSummaryAllowUntrustedRoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} - {1}.
+        /// </summary>
+        internal static string TrustedSignerLogCertificateSummaryUnallowUntrustedRoot {
+            get {
+                return ResourceManager.GetString("TrustedSignerLogCertificateSummaryUnallowUntrustedRoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trusted owners: {0}.
+        /// </summary>
+        internal static string TrustedSignerLogOwners {
+            get {
+                return ResourceManager.GetString("TrustedSignerLogOwners", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Service Index: {0}.
+        /// </summary>
+        internal static string TrustedSignerLogServiceIndex {
+            get {
+                return ResourceManager.GetString("TrustedSignerLogServiceIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} [{1}].
+        /// </summary>
+        internal static string TrustedSignerLogTitle {
+            get {
+                return ResourceManager.GetString("TrustedSignerLogTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to extract metadata from &apos;{0}&apos;..
         /// </summary>
         internal static string UnableToExtractAssemblyMetadata {
@@ -1517,6 +1814,15 @@ namespace NuGet.Commands {
         internal static string UnableToFindBuildOutput {
             get {
                 return ResourceManager.GetString("UnableToFindBuildOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unsupported hash algorithm: &apos;{0}&apos;.
+        /// </summary>
+        internal static string UnsupportedHashAlgorithm {
+            get {
+                return ResourceManager.GetString("UnsupportedHashAlgorithm", resourceCulture);
             }
         }
         
