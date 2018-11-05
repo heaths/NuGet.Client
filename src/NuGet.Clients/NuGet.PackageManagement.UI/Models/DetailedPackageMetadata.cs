@@ -30,6 +30,7 @@ namespace NuGet.PackageManagement.UI
             LicenseUrl = serverData.LicenseUrl;
             ProjectUrl = serverData.ProjectUrl;
             ReportAbuseUrl = serverData.ReportAbuseUrl;
+            PackageDetailsUrl = serverData.PackageDetailsUrl;
             Tags = serverData.Tags;
             DownloadCount = downloadCount;
             Published = serverData.Published;
@@ -64,6 +65,8 @@ namespace NuGet.PackageManagement.UI
         public Uri ProjectUrl { get; set; }
 
         public Uri ReportAbuseUrl { get; set; }
+
+        public Uri PackageDetailsUrl { get; set; }
 
         public string Tags { get; set; }
 

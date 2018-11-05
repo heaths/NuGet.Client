@@ -862,6 +862,15 @@ namespace NuGet.PackageManagement.UI {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Package Details:.
+        /// </summary>
+        public static string Label_PackageDetails {
+            get {
+                return ResourceManager.GetString("Label_PackageDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to NuGet Package Manager: {0}.
         /// </summary>
         public static string Label_PackageManager {

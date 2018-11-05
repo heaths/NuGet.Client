@@ -108,6 +108,7 @@ Background="{DynamicResource {x:Static nuget:Brushes.DetailPaneBackground}}"
         <RowDefinition />
         <RowDefinition />
         <RowDefinition />
+        <RowDefinition />
       </Grid.RowDefinitions>
       <Grid.ColumnDefinitions>
         <ColumnDefinition
@@ -266,10 +267,36 @@ Background="{DynamicResource {x:Static nuget:Brushes.DetailPaneBackground}}"
         </Hyperlink>
       </TextBlock>
 
+      <!-- Package details URL -->
+      <TextBlock
+        Visibility="{Binding Path=PackageDetailsUrl,Converter={StaticResource NullToVisibilityConverter}}"
+        Grid.Row="7"
+        Grid.Column="0"
+        FontWeight="Bold"
+        Margin="0,8,0,0"
+        x:Name="_packageDetailsLabel"
+        AutomationProperties.Name="{Binding Text}"
+        Text="{x:Static nuget:Resources.Label_PackageDetails}" />
+
+      <TextBlock
+        Visibility="{Binding Path=PackageDetailsUrl,Converter={StaticResource NullToVisibilityConverter}}"
+        TextWrapping="Wrap"
+        Margin="8,8,0,0"
+        Grid.Row="7"
+        Grid.Column="1"
+        AutomationProperties.LabeledBy="{Binding ElementName=_packageDetailsLabel}">
+        <Hyperlink
+          NavigateUri="{Binding Path=PackageDetailsUrl}"
+          Style="{StaticResource HyperlinkStyle}"
+          Command="{x:Static nuget:PackageManagerControlCommands.OpenExternalLink}">
+          <Run Text="{Binding Path=PackageDetailsUrl}" />
+        </Hyperlink>
+      </TextBlock>
+
       <!-- Report abuse Url -->
       <TextBlock
         Visibility="{Binding Path=ReportAbuseUrl,Converter={StaticResource NullToVisibilityConverter}}"
-        Grid.Row="7"
+        Grid.Row="8"
         Grid.Column="0"
         FontWeight="Bold"
         Margin="0,8,0,0"
@@ -281,7 +308,7 @@ Background="{DynamicResource {x:Static nuget:Brushes.DetailPaneBackground}}"
         Visibility="{Binding Path=ReportAbuseUrl,Converter={StaticResource NullToVisibilityConverter}}"
         TextWrapping="Wrap"
         Margin="8,8,0,0"
-        Grid.Row="7"
+        Grid.Row="8"
         Grid.Column="1"
         AutomationProperties.LabeledBy="{Binding ElementName=_reportAbuseLabel}">
         <Hyperlink
@@ -295,7 +322,7 @@ Background="{DynamicResource {x:Static nuget:Brushes.DetailPaneBackground}}"
       <!-- Tags -->
       <TextBlock
         Visibility="{Binding Path=Tags,Converter={StaticResource NullToVisibilityConverter}}"
-        Grid.Row="8"
+        Grid.Row="9"
         Grid.Column="0"
         FontWeight="Bold"
         Margin="0,8,0,0"
@@ -310,7 +337,7 @@ Background="{DynamicResource {x:Static nuget:Brushes.DetailPaneBackground}}"
         Text="{Binding Path=Tags}"
         Margin="8,8,0,0"
         TextWrapping="Wrap"
-        Grid.Row="8"
+        Grid.Row="9"
         Grid.Column="1" />
     </Grid>
 
