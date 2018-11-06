@@ -218,6 +218,8 @@ namespace NuGet.PackageManagement
         {
             var dgSpec = new DependencyGraphSpec();
 
+            var uniqueProjectDependencies = new HashSet<string>(PathUtility.GetStringComparerBasedOnOS());
+
             var projects = (await solutionManager.GetNuGetProjectsAsync()).OfType<IDependencyGraphProject>();
 
             foreach (var project in projects)
@@ -234,6 +236,36 @@ namespace NuGet.PackageManagement
                         packageSpec.RestoreMetadata.ProjectStyle == ProjectStyle.Standalone) // Don't add global tools to restore specs for solutions
                     {
                         dgSpec.AddRestore(packageSpec.RestoreMetadata.ProjectUniqueName);
+                    }
+
+                    var projFileName = Path.GetFileName(packageSpec.RestoreMetadata.ProjectPath);
+                    var dgFileName = string.Format(DependencyGraphSpec.DGSpecFileName, projFileName);
+                    var persistedDGSpecPath = Path.Combine(packageSpec.RestoreMetadata.OutputPath, dgFileName);
+
+                    if (File.Exists(persistedDGSpecPath))
+                    {
+                        DependencyGraphSpec persistedDGSpec = null;
+
+                        var projectDependencies = packageSpec.RestoreMetadata.TargetFrameworks.SelectMany(target => target.ProjectReferences);
+
+                        foreach (var projectReference in projectDependencies)
+                        {
+                            if (!projects.Any(p => PathUtility.GetStringComparerBasedOnOS().Equals(p.MSBuildProjectPath, projectReference.ProjectPath)) &&
+                                uniqueProjectDependencies.Add(projectReference.ProjectUniqueName))
+                            {
+                                if (persistedDGSpec == null)
+                                {
+                                    persistedDGSpec = DependencyGraphSpec.Load(persistedDGSpecPath);
+                                }
+
+                                var dependentPackageSpec = persistedDGSpec.GetProjectSpec(projectReference.ProjectUniqueName);
+
+                                if (dependentPackageSpec != null)
+                                {
+                                    dgSpec.AddProject(dependentPackageSpec);
+                                }
+                            }
+                        }
                     }
                 }
             }
